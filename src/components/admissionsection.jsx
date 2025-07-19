@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import campusImg from "../assets/heroCarousel/c1.jpg";
 import { LuMoveRight } from "react-icons/lu";
-import backPattern from "../assets/backPattern.png";
+import backPattern from "../assets/backpattern.png";
 
 const menuTabs = [
   "Admission Menu",

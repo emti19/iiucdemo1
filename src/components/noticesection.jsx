@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LuCalendarDays, LuMoveRight } from "react-icons/lu";
 import eventImg from "../assets/events.png";
-import backPattern from "../assets/backPattern.png";
+import backPattern from "../assets/backpattern.png";
 
 const tabs = ["General Notice", "Press Release", "Tenders"];
 const notices = [
