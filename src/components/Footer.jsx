@@ -1,7 +1,7 @@
 import React from 'react';
 import footerIcon from '../assets/footer-icon.png';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className='bg-[#003716] text-[#C8DED1] font-satoshi text-sm sm:text-base'>
       {/* Top Section */}

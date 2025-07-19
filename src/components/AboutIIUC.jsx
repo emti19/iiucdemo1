@@ -1,7 +1,7 @@
 import React from 'react';
 import abfinal from '../assets/abfinal.png';
 
-const AboutIIUC: React.FC = () => {
+const AboutIIUC = () => {
   return (
     <div className='flex flex-col lg:flex-row font-satoshi items-center justify-center px-4 sm:px-8 py-8 sm:py-12 lg:py-16 lg:gap-24'>
       {/* Left Section - Visual Content */}

@@ -1,7 +1,7 @@
 import React from 'react';
 import vv from '../assets/vv.png';
 
-const VirtualVisit: React.FC = () => {
+const VirtualVisit = () => {
   return (
     <div
       className='relative py-10 sm:py-16 lg:py-20 px-4 sm:px-8 font-satoshi min-h-[500px] h-screen max-w-full'

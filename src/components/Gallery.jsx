@@ -16,11 +16,8 @@ import g5 from '../assets/gallery/g5.png';
 import g6 from '../assets/gallery/g6.png';
 import g7 from '../assets/gallery/g7.png';
 
-const Gallery: React.FC = () => {
-  const [selectedImage, setSelectedImage] = useState<{
-    src: string;
-    alt: string;
-  } | null>(null);
+const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState();
 
   const galleryImages = [
     { id: 1, src: g1, alt: 'Campus Building' },
@@ -32,7 +29,7 @@ const Gallery: React.FC = () => {
     { id: 7, src: g7, alt: 'University Grounds' },
   ];
 
-  const openLightbox = (image: { src: string; alt: string }) => {
+  const openLightbox = (image) => {
     setSelectedImage(image);
   };
 

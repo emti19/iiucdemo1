@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import TopTabNav from './TopTabNav';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         style={{ backgroundColor: 'var(--primaryGreen)' }}
       >
         {/* Main navbar */}
-        <div className='flex items-center justify-between px-4 py-3 bg-white bg-white backdrop-blur-md'>
+        <div className='flex items-center justify-between px-4 py-3 bg-white backdrop-blur-md'>
           <div className='container mx-auto flex justify-between items-center'>
             {/* Left: Logo and search */}
             <div className='flex items-center gap-4'>

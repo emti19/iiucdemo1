@@ -1,7 +1,7 @@
 import React from 'react';
 import news from '../assets/news.png';
 
-const LatestNews: React.FC = () => {
+const LatestNews = () => {
   const newsData = [
     {
       id: 1,

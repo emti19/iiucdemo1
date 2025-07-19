@@ -4,7 +4,7 @@ import vc from '../assets/vc.png';
 import chairman from '../assets/chairman.png';
 import pre from '../assets/pre.png';
 
-const Leadership: React.FC = () => {
+const Leadership = () => {
   const leaders = [
     {
       id: 1,

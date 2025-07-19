@@ -7,7 +7,7 @@ import g3 from '../assets/gallery/g3.png';
 import g4 from '../assets/gallery/g4.png';
 import bg from '../assets/bg.png';
 
-const CourseSearch: React.FC = () => {
+const CourseSearch = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [studyLevel, setStudyLevel] = useState('Study level');

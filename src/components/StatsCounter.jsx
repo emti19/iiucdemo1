@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const StatsCounter: React.FC = () => {
+const StatsCounter = () => {
   const [counts, setCounts] = useState({
     students: 0,
     degrees: 0,
@@ -9,7 +9,7 @@ const StatsCounter: React.FC = () => {
   });
 
   const [hasAnimated, setHasAnimated] = useState(false);
-  const componentRef = useRef<HTMLDivElement>(null);
+  const componentRef = useRef(null);
 
   const targetCounts = {
     students: 10,

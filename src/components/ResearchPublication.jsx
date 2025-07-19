@@ -2,7 +2,7 @@ import React from 'react';
 import r1 from '../assets/r1.jpg';
 import r2 from '../assets/r2.jpg';
 
-const ResearchPublication: React.FC = () => {
+const ResearchPublication = () => {
   return (
     <div className='py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 font-satoshi'>
       <div className='max-w-7xl mx-auto'>

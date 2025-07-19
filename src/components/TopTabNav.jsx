@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopTabNav: React.FC = () => (
+const TopTabNav = () => (
   <div className='hidden md:block w-full bg-[var(--primaryGreen)]'>
     <div className='container mx-auto flex justify-between items-center text-sm px-4 py-1'>
       {/* Left side quick links */}
