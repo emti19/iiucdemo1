@@ -3,7 +3,7 @@ import abfinal from '../assets/abfinal.png';
 
 const AboutIIUC: React.FC = () => {
   return (
-    <div className='flex flex-col lg:flex-row min-h-screen font-satoshi items-center justify-center px-4 sm:px-8 py-8 sm:py-12 lg:py-0 lg:gap-24'>
+    <div className='flex flex-col lg:flex-row font-satoshi items-center justify-center px-4 sm:px-8 py-8 sm:py-12 lg:py-16 lg:gap-24'>
       {/* Left Section - Visual Content */}
       <div className='max-w-2xl max-h-[700px] aspect-[4/3] flex items-center justify-center mb-8 lg:mb-0'>
         <div className='relative w-full h-full rounded-2xl overflow-hidden'>

@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
   return (
     <>
       <div
-        className='py-16 px-8 font-satoshi relative'
+        className='py-8 sm:py-12 lg:py-16 px-4 sm:px-8 font-satoshi relative'
         style={{
           backgroundImage: `url(${bg})`,
           backgroundRepeat: 'no-repeat',
@@ -62,12 +62,12 @@ const Gallery: React.FC = () => {
 
         <div className='max-w-7xl mx-auto relative z-10'>
           {/* Header Section */}
-          <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12'>
-            <div className='flex-1 mb-6 lg:mb-0'>
-              <h2 className='text-4xl font-bold text-black mb-4'>
+          <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 sm:mb-12 gap-4'>
+            <div className='flex-1 mb-4 lg:mb-0'>
+              <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-2 sm:mb-4'>
                 Pictures and Gallery
               </h2>
-              <p className='text-lg text-black max-w-2xl'>
+              <p className='text-base sm:text-lg text-black max-w-2xl'>
                 Explore moments from campus life, events, and student activities
                 captured through the lens of IIUC's vibrant community.
               </p>
@@ -75,7 +75,7 @@ const Gallery: React.FC = () => {
 
             <a
               href='#'
-              className='text-lg text-black underline hover:no-underline flex items-center group'
+              className='text-base sm:text-lg text-black underline hover:no-underline flex items-center group'
             >
               Picture gallery
               <svg
@@ -96,7 +96,7 @@ const Gallery: React.FC = () => {
           <div className='relative'>
             <Swiper
               modules={[Pagination, Autoplay]}
-              spaceBetween={24}
+              spaceBetween={16}
               slidesPerView='auto'
               pagination={{
                 clickable: true,
@@ -111,14 +111,14 @@ const Gallery: React.FC = () => {
               {galleryImages.map((image) => (
                 <SwiperSlide key={image.id} className='!w-auto'>
                   <div
-                    className='h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer'
+                    className='h-40 sm:h-56 lg:h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer max-w-xs sm:max-w-sm lg:max-w-md'
                     onClick={() => openLightbox(image)}
                   >
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className='h-full object-cover hover:scale-105 transition-transform duration-300'
-                      style={{ width: 'auto' }}
+                      className='h-full w-auto max-w-full object-cover hover:scale-105 transition-transform duration-300'
+                      style={{ maxHeight: '256px' }}
                     />
                   </div>
                 </SwiperSlide>
@@ -161,14 +161,14 @@ const Gallery: React.FC = () => {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className='fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4'
+          className='fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-2 sm:p-4'
           onClick={closeLightbox}
         >
-          <div className='relative max-w-4xl max-h-full'>
+          <div className='relative w-full max-w-2xl sm:max-w-4xl max-h-full flex items-center justify-center'>
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className='absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-200 z-10'
+              className='absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors duration-200 z-10'
             >
               <svg className='w-8 h-8' fill='currentColor' viewBox='0 0 20 20'>
                 <path
@@ -183,7 +183,7 @@ const Gallery: React.FC = () => {
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
-              className='max-w-full max-h-full object-cover rounded-lg shadow-2xl'
+              className='max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl'
               onClick={(e) => e.stopPropagation()}
             />
           </div>

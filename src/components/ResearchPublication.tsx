@@ -16,7 +16,7 @@ const ResearchPublication: React.FC = () => {
 
           <a
             href='#'
-            className='text-base sm:text-lg text-purple-800 underline hover:no-underline flex items-center group'
+            className='text-base sm:text-lg text-[#0D0357] flex items-center group'
           >
             View all Research
             <svg

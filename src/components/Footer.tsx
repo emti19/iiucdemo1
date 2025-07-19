@@ -3,22 +3,22 @@ import footerIcon from '../assets/footer-icon.png';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='bg-[#003716] text-[#C8DED1] font-satoshi'>
+    <footer className='bg-[#003716] text-[#C8DED1] font-satoshi text-sm sm:text-base'>
       {/* Top Section */}
-      <div className='max-w-7xl mx-auto px-8 py-12'>
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-8 items-start'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-start'>
           {/* University Logo */}
-          <div className='flex flex-col items-start'>
+          <div className='flex flex-col items-start mb-6 sm:mb-0'>
             <img
               src={footerIcon}
               alt='IIUC Logo'
-              className='h-20 w-auto mb-4'
+              className='h-14 sm:h-20 w-auto mb-4'
             />
           </div>
 
           {/* Contact Info */}
           <div className='space-y-4'>
-            <h3 className='text-lg font-semibold mb-4 font-satoshi'>
+            <h3 className='text-base sm:text-lg font-semibold mb-3 sm:mb-4 font-satoshi'>
               Contact info
             </h3>
             <div className='space-y-3'>
@@ -52,31 +52,31 @@ const Footer: React.FC = () => {
 
           {/* Social Media */}
           <div className='space-y-4'>
-            <h3 className='text-lg font-semibold mb-4 font-satoshi'>
+            <h3 className='text-base sm:text-lg font-semibold mb-3 sm:mb-4 font-satoshi'>
               Social Media
             </h3>
-            <div className='flex space-x-3'>
+            <div className='flex space-x-2 sm:space-x-3'>
               <a
                 href='#'
-                className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
+                className='w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
               >
-                <span className='text-sm font-bold'>f</span>
+                <span className='text-xs sm:text-sm font-bold'>f</span>
               </a>
               <a
                 href='#'
-                className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
+                className='w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
               >
-                <span className='text-sm font-bold'>G</span>
+                <span className='text-xs sm:text-sm font-bold'>G</span>
               </a>
               <a
                 href='#'
-                className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
+                className='w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
               >
-                <span className='text-sm font-bold'>in</span>
+                <span className='text-xs sm:text-sm font-bold'>in</span>
               </a>
               <a
                 href='#'
-                className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
+                className='w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors'
               >
                 <svg
                   className='w-4 h-4'
@@ -94,8 +94,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Apply Online Button */}
-          <div className='flex justify-end'>
-            <button className='bg-white text-[#003716] px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center group'>
+          <div className='flex justify-end items-center mt-6 sm:mt-0'>
+            <button className='bg-white text-[#003716] px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center group text-sm sm:text-base'>
               Apply online
               <svg
                 className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform'
@@ -117,8 +117,8 @@ const Footer: React.FC = () => {
       <div className='border-t border-white border-opacity-20'></div>
 
       {/* Navigation Links */}
-      <div className='max-w-7xl mx-auto px-8 py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>
           {/* Admission */}
           <div className='space-y-4'>
             <h3 className='text-lg font-semibold font-fraunces'>Admission</h3>
@@ -298,12 +298,10 @@ const Footer: React.FC = () => {
       <div className='border-t border-white border-opacity-20'></div>
 
       {/* Bottom Section */}
-      <div className='max-w-7xl mx-auto px-8 py-6'>
-        <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-          <div className='text-sm'>
-            Copyright © 2017 - 2025 All rights reserved IIUC
-          </div>
-          <div className='text-sm'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6'>
+        <div className='flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 text-xs sm:text-sm'>
+          <div>Copyright © 2017 - 2025 All rights reserved IIUC</div>
+          <div>
             International Islamic University Chittagong | +8809613230505
           </div>
         </div>
