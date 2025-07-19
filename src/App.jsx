@@ -12,6 +12,10 @@ import Leadership from './components/Leadership';
 import Gallery from './components/Gallery';
 import VirtualVisit from './components/VirtualVisit';
 import Footer from './components/Footer';
+import HeroSection from './components/herosection'
+import NoticeSection from './components/noticesection'
+import AdmissionSection from './components/admissionsection'
+import FindYourWaySection from './components/findyourwaysection'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +24,10 @@ function App() {
     <>
       <div>
         <Navbar />
+        <HeroSection />
+        <NoticeSection />
+        <AdmissionSection />
+        <FindYourWaySection />
         <CourseSearch />
         <ResearchPublication />
         <AboutIIUC />
