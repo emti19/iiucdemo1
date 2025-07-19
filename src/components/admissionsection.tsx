@@ -24,7 +24,7 @@ export default function AdmissionSection() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="relative w-full py-12 overflow-hidden">
+    <div className="relative w-full py-16 overflow-hidden">
       {/* Background Image with 5% Opacity */}
       <div
         className="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-5 z-0"
@@ -32,36 +32,40 @@ export default function AdmissionSection() {
       ></div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 w-full flex flex-col items-center px-2 md:px-0">
+      <div className="container mx-auto">
+        <div className="relative z-10 w-full flex flex-col items-center px-2 md:px-0">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center mb-8">Admission</h1>
 
         {/* Tabs */}
-        <div className="flex gap-2 justify-center mb-10">
-          {menuTabs.map((tab, idx) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(idx)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 text-base shadow-sm ${
-                activeTab === idx
-                  ? "bg-[#005C25] text-white"
-                  : "bg-[#F7FAF7] text-[#222] hover:bg-[#E6F0E6]"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
+        <div className="flex justify-center mb-10">
+          <div className="flex bg-[#F0F7F2] rounded-full px-2 py-1">
+            {menuTabs.map((tab, idx) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(idx)}
+                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 text-base ${
+                  activeTab === idx
+                    ? "bg-[#005C25] text-white shadow"
+                    : "bg-transparent text-[#222]"
+                }`}
+                style={{ minWidth: 120 }}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Main Card */}
-        <div className="bg-[#F7FAF7] rounded-2xl flex flex-col md:flex-row w-full max-w-5xl mx-auto shadow border border-[#E6F0E6] p-8 items-stretch">
+        <div className="bg-[#F7FAF7] rounded-2xl flex flex-col md:flex-row w-full shadow border border-[#E6F0E6] p-8 items-stretch">
           {/* Image Section */}
           <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 md:mr-8">
             <img
               src={campusImg}
               alt="IIUC Campus"
-              className="rounded-xl object-cover w-full h-80 md:w-[400px] md:h-[320px]"
-              style={{ maxWidth: "420px" }}
+              className="rounded-xl object-cover w-full h-[28rem] md:w-[600px] md:h-[420px]"
+              style={{ maxWidth: "640px" }}
             />
           </div>
 
@@ -94,6 +98,7 @@ export default function AdmissionSection() {
               </div>
             )}
           </div>
+        </div>
         </div>
       </div>
     </div>

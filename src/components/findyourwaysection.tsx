@@ -17,20 +17,16 @@ export default function FindYourWay() {
 
   return (
     <section
-      className="relative bg-center min-h-[70vh] w-full"
+      className="relative bg-center bg-cover w-full py-32"
       style={{ backgroundImage: `url(${backPattern})` }}
     >
-      {/* Dark overlay */}
-        <div
-        className="absolute inset-0 bg-[linear-gradient(to_bottom,_#003716,_#003716_60%)] opacity-90"
-        ></div>
-
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,_#003716,_#003716_80%)] opacity-90"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between h-full gap-10">
-        
+      <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Section */}
-        <div className="w-full md:w-1/4 flex flex-col items-start text-left text-white pt-8 md:pt-10">
+        <div className="w-full md:w-1/4 flex flex-col items-start text-left text-white">
           <h2 className="text-4xl font-bold mb-4">Find your way</h2>
           <p className="text-base mb-8 opacity-80 max-w-md">
             Discover a realm of possibilities and navigate the various routes to achievement at IIUC University.
@@ -53,7 +49,7 @@ export default function FindYourWay() {
 
         {/* Right Section */}
         <div className="w-full md:w-3/4 flex justify-center">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 w-full max-w-md  border border-[#1ca45c] rounded-xl overflow-hidden">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 w-full max-w-md rounded-xl overflow-hidden">
             {mainLinks.map((link, idx) => (
               <a
                 key={link.label}
@@ -65,7 +61,7 @@ export default function FindYourWay() {
                   ${hovered === idx ? "bg-white bg-opacity-10 scale-105 shadow-lg" : "bg-transparent"}
                 `}
               >
-                {/* Optional hover overlay */}
+                {/* Hover overlay */}
                 {hovered === idx && (
                   <span className="absolute inset-0 bg-black bg-opacity-10 transition-opacity duration-500 z-0" />
                 )}
@@ -75,7 +71,7 @@ export default function FindYourWay() {
                     <span className="text-center px-4 text-base text-white mb-2">
                       {link.label}
                     </span>
-                    <span className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform hover:-rotate-45">
+                    <span className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform hover:-rotate-[45deg]">
                       <MoveRight className="text-[#005C25] w-5 h-5" />
                     </span>
                   </span>

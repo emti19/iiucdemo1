@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
   ];
 
   return (
-    <div className="relative w-full h-[85vh] overflow-hidden z-0">
+    <div className="relative w-full h-[90vh] overflow-hidden z-0">
       {images.map((img, idx) => (
         <img
           key={idx}
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full mt-6">
             {quickLinks.map((link, index) => (
                 <a
                 key={index}

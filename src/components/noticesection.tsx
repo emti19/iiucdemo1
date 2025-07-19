@@ -9,6 +9,8 @@ const notices = [
   { date: "12", month: "JUN", text: "Pre-requisites to Sit for Semester End Exam." },
   { date: "08", month: "JUN", text: "Pre-requisites to Sit for Semester End Exam. Spring-2025" },
   { date: "09", month: "JUN", text: "Pre-requisites to Sit for Semester End Exam." },
+  { date: "05", month: "JUN", text: "Notice for Course Registration Deadline." },
+  { date: "01", month: "JUN", text: "Important update regarding campus facilities." },
 ];
 
 export default function NoticeSection() {
@@ -23,7 +25,8 @@ export default function NoticeSection() {
       ></div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 bg-[#F7FAF7] rounded-xl border border-[#D9E5DD] p-8 flex flex-col md:flex-row gap-8 w-full max-w-5xl mx-auto shadow">
+      <div className="container mx-auto">
+        <div className="relative z-10 bg-[#F7FAF7] rounded-xl border border-[#D9E5DD] p-8 flex flex-col md:flex-row gap-8 w-full shadow">
         {/* Notices */}
         <div className="flex-1">
           <h2 className="text-2xl font-bold mb-6">Notices</h2>
@@ -81,6 +84,7 @@ export default function NoticeSection() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
