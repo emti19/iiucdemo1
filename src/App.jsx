@@ -27,7 +27,7 @@ const App = () => {
       <AboutIIUC />
       <StatsCounter />
       <LatestNews />
-      <Leadership />
+      {/* <Leadership /> */}
       <Gallery />
       <VirtualVisit />
       <Footer />

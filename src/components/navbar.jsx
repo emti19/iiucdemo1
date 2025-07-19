@@ -8,12 +8,9 @@ const Navbar = () => {
   return (
     <>
       <TopTabNav />
-      <nav
-        className='w-full bg-white shadow-sm sticky top-0 z-50'
-        style={{ backgroundColor: 'var(--primaryGreen)' }}
-      >
+      <nav className='w-full sticky top-0 z-50 bg-white/30 backdrop-blur-lg shadow-lg'>
         {/* Main navbar */}
-        <div className='flex items-center justify-between px-4 py-3 bg-white backdrop-blur-md'>
+        <div className='flex items-center justify-between px-4 py-3'>
           <div className='container mx-auto flex justify-between items-center'>
             {/* Left: Logo and search */}
             <div className='flex items-center gap-4'>

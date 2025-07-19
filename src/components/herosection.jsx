@@ -16,6 +16,7 @@ const images = [slide1, slide2, slide3, slide4];
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [parallax, setParallax] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,6 +24,15 @@ const HeroSection = () => {
     }, 5000);
     return () => clearTimeout(timer);
   }, [current]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Adjust the divisor for more/less parallax effect
+      setParallax(window.scrollY * 0.4);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const prevSlide = () =>
     setCurrent((current - 1 + images.length) % images.length);
@@ -45,7 +55,11 @@ const HeroSection = () => {
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
             current === idx ? 'opacity-100 z-0' : 'opacity-0 z-0'
           }`}
-          style={{ pointerEvents: current === idx ? 'auto' : 'none' }}
+          style={{
+            pointerEvents: current === idx ? 'auto' : 'none',
+            transform: `translateY(${parallax}px)`,
+            willChange: 'transform',
+          }}
         />
       ))}
 

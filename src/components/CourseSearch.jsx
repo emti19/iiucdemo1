@@ -181,7 +181,7 @@ const CourseSearch = () => {
               {/* Find Course Button */}
               <button
                 onClick={handleSearch}
-                className='bg-[#0D0357] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-[#0a0247] transition-colors duration-300 flex items-center justify-center group whitespace-nowrap text-sm sm:text-base'
+                className='bg-[#005C25] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors duration-300 flex items-center justify-center group whitespace-nowrap text-sm sm:text-base'
               >
                 Find your course
                 <svg
