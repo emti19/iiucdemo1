@@ -1,7 +1,7 @@
 // At the top of your component file
 import { MoveRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import backpattern from '../assets/findyourway/default.jpg';
+import backpattern from '../assets/findyourway/backpattern.jpg';
 import departmentsbg from '../assets/findyourway/departments.jpg';
 import centersbg from '../assets/findyourway/centers.jpg';
 import admissionbg from '../assets/findyourway/admission.jpg';
