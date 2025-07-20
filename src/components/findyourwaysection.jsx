@@ -1,28 +1,28 @@
 // At the top of your component file
 import { MoveRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import backPattern from '../assets/findyourway/default.jpg';
-import departmentsBg from '../assets/findyourway/departments.jpg';
-import centersBg from '../assets/findyourway/centers.jpg';
-import admissionBg from '../assets/findyourway/admission.jpg';
-import researchBg from '../assets/findyourway/research.JPG';
-import studentLifeBg from '../assets/findyourway/studentlife.jpg';
-import scholarshipBg from '../assets/findyourway/scholarship.jpg';
+import backpattern from '../assets/findyourway/default.jpg';
+import departmentsbg from '../assets/findyourway/departments.jpg';
+import centersbg from '../assets/findyourway/centers.jpg';
+import admissionbg from '../assets/findyourway/admission.jpg';
+import researchbg from '../assets/findyourway/research.JPG';
+import studentLifebg from '../assets/findyourway/studentlife.jpg';
+import scholarshipbg from '../assets/findyourway/scholarship.jpg';
 
 export default function FindYourWay() {
   const [hovered, setHovered] = useState(null);
-  const [currentBg, setCurrentBg] = useState(backPattern);
+  const [currentBg, setCurrentBg] = useState(backpattern);
 
   const mainLinks = [
-    { label: 'Departments', href: '#', bgImage: departmentsBg },
-    { label: 'Centers', href: '#', bgImage: centersBg },
-    { label: 'Admission', href: '#', bgImage: admissionBg },
-    { label: 'Research', href: '#', bgImage: researchBg },
-    { label: 'Student Life', href: '#', bgImage: studentLifeBg },
+    { label: 'Departments', href: '#', bgImage: departmentsbg },
+    { label: 'Centers', href: '#', bgImage: centersbg },
+    { label: 'Admission', href: '#', bgImage: admissionbg },
+    { label: 'Research', href: '#', bgImage: researchbg },
+    { label: 'Student Life', href: '#', bgImage: studentLifebg },
     {
       label: 'Scholarships and Financial Aid',
       href: '#',
-      bgImage: scholarshipBg,
+      bgImage: scholarshipbg,
     },
   ];
 

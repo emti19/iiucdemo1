@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { FaAnglesLeft, FaAnglesRight } from 'react-icons/fa6';
 
 import slide1 from '../assets/heroCarousel/c1.jpg';
-import slide2 from '../assets/heroCarousel/c2.jpeg';
-import slide3 from '../assets/heroCarousel/c3.jpeg';
-import slide4 from '../assets/heroCarousel/c4.jpeg';
+import slide2 from '../assets/heroCarousel/c2.jpg';
+import slide3 from '../assets/heroCarousel/c3.jpg';
+import slide4 from '../assets/heroCarousel/c4.jpg';
+import slide5 from '../assets/heroCarousel/c5.jpg';
+import slide6 from '../assets/heroCarousel/c6.jpeg';
 
 import { GoPersonAdd } from 'react-icons/go';
 import { PiMicroscope } from 'react-icons/pi';
 import { BsPersonBoundingBox } from 'react-icons/bs';
 import { LuCalendarDays, LuMoveRight } from 'react-icons/lu';
 
-const images = [slide1, slide2, slide3, slide4];
+const images = [slide1, slide2, slide3, slide4, slide5, slide6];
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);

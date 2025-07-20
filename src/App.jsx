@@ -13,8 +13,8 @@ import Footer from './components/Footer';
 import HeroSection from './components/herosection';
 import NoticeSection from './components/noticesection';
 import AdmissionSection from './components/admissionsection';
-import FindYourWay from './components/findyourwaysection';
-import V2 from './V2'; // Create this file/component
+import FindYourWay from './components/findyourwaysection'; 
+import V2 from './v2';
 
 const Home = () => (
   <>
