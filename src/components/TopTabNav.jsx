@@ -5,11 +5,11 @@ const TopTabNav = () => (
     <div className='container mx-auto flex justify-between items-center text-sm px-4 py-1'>
       {/* Left side quick links */}
       <div className='flex gap-6 items-center text-[#C8DED1]'>
-        <a href='#' className='hover:underline'>
-          ITD
+        <a href='/' className='hover:underline'>
+          V1
         </a>
-        <a href='#' className='hover:underline'>
-          BoT
+        <a href='/v2' className='hover:underline'>
+          V2
         </a>
         <a href='#' className='hover:underline'>
           Quick Contacts
@@ -41,7 +41,10 @@ const TopTabNav = () => (
             </svg>
           </button>
           {/* Dropdown */}
-          <div className='absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity' style={{ zIndex: 100 }}>
+          <div
+            className='absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity'
+            style={{ zIndex: 100 }}
+          >
             <a href='#' className='block px-4 py-2 hover:bg-gray-100'>
               Info 1
             </a>
