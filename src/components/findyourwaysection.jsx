@@ -1,6 +1,6 @@
 // At the top of your component file
 import { MoveRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import backPattern from '../assets/findyourway/default.jpg';
 import departmentsBg from '../assets/findyourway/departments.jpg';
 import centersBg from '../assets/findyourway/centers.jpg';
@@ -11,6 +11,7 @@ import scholarshipBg from '../assets/findyourway/scholarship.jpg';
 
 export default function FindYourWay() {
   const [hovered, setHovered] = useState(null);
+  const [currentBg, setCurrentBg] = useState(backPattern);
 
   const mainLinks = [
     { label: 'Departments', href: '#', bgImage: departmentsBg },
@@ -21,11 +22,31 @@ export default function FindYourWay() {
     { label: 'Scholarships and Financial Aid', href: '#', bgImage: scholarshipBg },
   ];
 
+  useEffect(() => {
+    let timeoutId;
+    
+    if (hovered !== null) {
+      timeoutId = setTimeout(() => {
+        setCurrentBg(mainLinks[hovered].bgImage);
+      }, 300); // 300ms delay
+    } else {
+      timeoutId = setTimeout(() => {
+        setCurrentBg(backPattern);
+      }, 300); // 300ms delay
+    }
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [hovered]);
+
   return (
     <section
       className='relative bg-center bg-cover w-full transition-all duration-700 ease-in-out'
       style={{ 
-        backgroundImage: `url(${hovered !== null ? mainLinks[hovered].bgImage : backPattern})`,
+        backgroundImage: `url(${currentBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -35,7 +56,7 @@ export default function FindYourWay() {
       <div className='absolute inset-0 bg-gradient-to-b from-[#003716] via-[#003716]/80 to-[#003716]/60 opacity-95'></div>
 
       {/* Content */}
-      <div className='relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10 py-20'>
+      <div className='relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10 py-24'>
         {/* Left Section */}
         <div className='w-full md:w-1/4 flex flex-col items-start text-left text-white'>
           <h2 className='text-4xl font-bold mb-4'>Find your way</h2>
@@ -46,13 +67,13 @@ export default function FindYourWay() {
           <div className='flex gap-4 flex-wrap'>
             <a
               href='#'
-              className='bg-white text-[#005C25] font-semibold px-5 py-2 rounded-full shadow hover:bg-gray-100 transition'
+              className='border border-white text-white font-semibold px-5 py-2 rounded-full hover:bg-white hover:text-[#005C25] transition-all duration-300 ease-in-out'
             >
               Undergraduate Programs
             </a>
             <a
               href='#'
-              className='border border-white text-white font-semibold px-5 py-2 rounded-full hover:bg-white hover:text-[#005C25] transition'
+              className='border border-white text-white font-semibold px-5 py-2 rounded-full hover:bg-white hover:text-[#005C25] transition-all duration-300 ease-in-out'
             >
               Graduate Programs
             </a>
@@ -69,7 +90,7 @@ export default function FindYourWay() {
                 target="_blank"
                 onMouseEnter={() => setHovered(idx)}
                 onMouseLeave={() => setHovered(null)}
-                className={`relative flex items-center justify-center w-[304px] h-[312px] text-white font-semibold text-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out
+                className={`relative flex items-center justify-center w-[304px] h-[312px] text-white font-semibold text-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out group
                   ${
                     hovered === idx
                       ? 'bg-white bg-opacity-10 scale-105 shadow-lg'
@@ -95,8 +116,8 @@ export default function FindYourWay() {
                     <span className="text-center px-4 text-lg text-white mb-4">
                       {link.label}
                     </span>
-                    <span className={`bg-white rounded-full w-14 h-14 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform ${hovered === idx ? '-rotate-[45deg]' : ''}`}>
-                      <MoveRight className="text-[#005C25] w-7 h-7" />
+                    <span className="bg-transparent border border-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform group-hover:-rotate-45">
+                      <MoveRight className="text-white w-5 h-5" />
                     </span>
                   </span>
                 ) : (
