@@ -1,6 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Add this import
 import r1 from '../assets/r1.jpg';
 import r2 from '../assets/r2.jpg';
+
+const cardVariants = {
+  offscreen: { opacity: 0, y: 40 },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', bounce: 0.15, duration: 2 }, // even slower
+  },
+};
 
 const ResearchPublication = () => {
   return (
@@ -36,17 +46,24 @@ const ResearchPublication = () => {
         {/* Research Cards */}
         <div className='flex flex-col lg:flex-row gap-6 lg:gap-8'>
           {/* Card 1 */}
-          <div className='relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer w-full lg:w-[60%] min-h-[320px] sm:min-h-[400px] lg:min-h-[520px] max-h-[520px]'>
+          <motion.div
+            className='relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer w-full lg:w-[60%] min-h-[320px] sm:min-h-[400px] lg:min-h-[520px] max-h-[520px]'
+            initial='offscreen'
+            whileInView='onscreen'
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+            whileHover={{ scale: 1.025 }}
+          >
             <img
               src={r1}
               alt='Research on nanostructured TiO₂ thin films'
-              className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 min-h-[320px] sm:min-h-[400px] lg:min-h-[520px] max-h-[520px]'
+              className='w-full h-full object-cover transition-transform duration-300 min-h-[320px] sm:min-h-[400px] lg:min-h-[520px] max-h-[520px]'
             />
             <div
               className='absolute bottom-0 left-0 right-0 p-4 sm:p-6'
               style={{
                 background:
-                  'linear-gradient(to top, #0D0357 0%, rgba(13, 3, 87, 0.8) 50%, transparent 100%)',
+                  'linear-gradient(to top, #003716 0%, rgba(0, 55, 22, 0.85) 50%, transparent 100%)',
               }}
             >
               <div className='flex justify-between items-start'>
@@ -75,20 +92,27 @@ const ResearchPublication = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2 */}
-          <div className='relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer w-full lg:w-[40%] min-h-[220px] sm:min-h-[320px] lg:min-h-[520px] max-h-[520px]'>
+          <motion.div
+            className='relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer w-full lg:w-[40%] min-h-[220px] sm:min-h-[320px] lg:min-h-[520px] max-h-[520px]'
+            initial='offscreen'
+            whileInView='onscreen'
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+            whileHover={{ scale: 1.025 }}
+          >
             <img
               src={r2}
               alt='Research on telecommunications tower'
-              className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 min-h-[220px] sm:min-h-[320px] lg:min-h-[520px] max-h-[520px]'
+              className='w-full h-full object-cover transition-transform duration-300 min-h-[220px] sm:min-h-[320px] lg:min-h-[520px] max-h-[520px]'
             />
             <div
               className='absolute bottom-0 left-0 right-0 p-4 sm:p-6'
               style={{
                 background:
-                  'linear-gradient(to top, #0D0357 0%, rgba(13, 3, 87, 0.8) 50%, transparent 100%)',
+                  'linear-gradient(to top, #003716 0%, rgba(0, 55, 22, 0.85) 50%, transparent 100%)',
               }}
             >
               <div className='flex justify-between items-start'>
@@ -117,7 +141,7 @@ const ResearchPublication = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

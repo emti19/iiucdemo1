@@ -1,5 +1,19 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import news from '../assets/news.png';
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.96, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.12,
+      duration: 0.9,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 const LatestNews = () => {
   const newsData = [
@@ -53,10 +67,16 @@ const LatestNews = () => {
 
         {/* News Cards Grid */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
-          {newsData.map((item) => (
-            <div
+          {newsData.map((item, i) => (
+            <motion.div
               key={item.id}
               className='rounded-xl shadow-sm overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col h-full'
+              custom={i}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+              whileHover={{ scale: 1.015 }}
             >
               {/* News Image */}
               <div className='relative'>
@@ -90,7 +110,7 @@ const LatestNews = () => {
                   {item.title}
                 </h3>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
