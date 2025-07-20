@@ -61,7 +61,7 @@ export default function FindYourWay() {
 
         {/* Right Section */}
         <div className='w-full md:w-3/4 flex justify-center border rounded-xl border-[#005C25]'>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full max-w-4xl rounded-xl overflow-hidden">
             {mainLinks.map((link, idx) => (
               <a
                 key={link.label}
@@ -80,7 +80,7 @@ export default function FindYourWay() {
                   minWidth: '100%',
                   minHeight: 180,
                   maxWidth: 304,
-                  maxHeight: 330,
+                  maxHeight: 350,
                   width: '100%',
                   height: '100%',
                 }}
@@ -95,7 +95,7 @@ export default function FindYourWay() {
                     <span className="text-center px-4 text-lg text-white mb-4">
                       {link.label}
                     </span>
-                    <span className="bg-white rounded-full w-14 h-14 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform hover:-rotate-[45deg]">
+                    <span className={`bg-white rounded-full w-14 h-14 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform ${hovered === idx ? '-rotate-[45deg]' : ''}`}>
                       <MoveRight className="text-[#005C25] w-7 h-7" />
                     </span>
                   </span>
