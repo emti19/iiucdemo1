@@ -19,12 +19,16 @@ export default function FindYourWay() {
     { label: 'Admission', href: '#', bgImage: admissionBg },
     { label: 'Research', href: '#', bgImage: researchBg },
     { label: 'Student Life', href: '#', bgImage: studentLifeBg },
-    { label: 'Scholarships and Financial Aid', href: '#', bgImage: scholarshipBg },
+    {
+      label: 'Scholarships and Financial Aid',
+      href: '#',
+      bgImage: scholarshipBg,
+    },
   ];
 
   useEffect(() => {
     let timeoutId;
-    
+
     if (hovered !== null) {
       timeoutId = setTimeout(() => {
         setCurrentBg(mainLinks[hovered].bgImage);
@@ -45,15 +49,21 @@ export default function FindYourWay() {
   return (
     <section
       className='relative bg-center bg-cover w-full transition-all duration-700 ease-in-out'
-      style={{ 
+      style={{
         backgroundImage: `url(${currentBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Dark gradient overlay */}
-      <div className='absolute inset-0 bg-gradient-to-b from-[#003716] via-[#003716]/80 to-[#003716]/60 opacity-95'></div>
+      {/* Linear gradient overlay */}
+      <div
+        className='absolute inset-0'
+        style={{
+          background:
+            'linear-gradient(180deg, #003716 0%, rgba(0, 55, 22, 0.9) 30%, rgba(0, 55, 22, 0.7) 100%)',
+        }}
+      ></div>
 
       {/* Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10 py-24'>
@@ -82,12 +92,12 @@ export default function FindYourWay() {
 
         {/* Right Section */}
         <div className='w-full md:w-3/4 flex justify-center border rounded-xl border-[#005C25]'>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full max-w-4xl rounded-xl overflow-hidden">
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full max-w-4xl rounded-xl overflow-hidden'>
             {mainLinks.map((link, idx) => (
               <a
                 key={link.label}
                 href={link.href}
-                target="_blank"
+                target='_blank'
                 onMouseEnter={() => setHovered(idx)}
                 onMouseLeave={() => setHovered(null)}
                 className={`relative flex items-center justify-center w-[304px] h-[312px] text-white font-semibold text-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out group
@@ -99,7 +109,7 @@ export default function FindYourWay() {
                 `}
                 style={{
                   minWidth: '100%',
-                  minHeight: 180,
+                  minHeight: 250,
                   maxWidth: 304,
                   maxHeight: 350,
                   width: '100%',
@@ -108,20 +118,20 @@ export default function FindYourWay() {
               >
                 {/* Hover overlay */}
                 {hovered === idx && (
-                  <span className="absolute inset-0 bg-black bg-opacity-10 transition-opacity duration-500 z-0" />
+                  <span className='absolute inset-0 bg-black bg-opacity-10 transition-opacity duration-500 z-0' />
                 )}
 
                 {hovered === idx ? (
-                  <span className="flex flex-col items-center justify-center z-10 transition-opacity duration-500 ease-in-out opacity-100">
-                    <span className="text-center px-4 text-lg text-white mb-4">
+                  <span className='flex flex-col items-center justify-center z-10 transition-opacity duration-500 ease-in-out opacity-100'>
+                    <span className='text-center px-4 text-lg text-white mb-4'>
                       {link.label}
                     </span>
-                    <span className="bg-transparent border border-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform group-hover:-rotate-45">
-                      <MoveRight className="text-white w-5 h-5" />
+                    <span className='bg-transparent border border-white rounded-full w-10 h-10 flex items-center justify-center shadow transition-transform duration-500 ease-in-out transform group-hover:-rotate-45'>
+                      <MoveRight className='text-white w-5 h-5' />
                     </span>
                   </span>
                 ) : (
-                  <span className="z-10 text-center px-4 text-lg text-white transition-opacity duration-500 ease-in-out opacity-80">
+                  <span className='z-10 text-center px-4 text-lg text-white transition-opacity duration-500 ease-in-out opacity-80'>
                     {link.label}
                   </span>
                 )}
