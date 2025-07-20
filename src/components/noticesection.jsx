@@ -4,7 +4,7 @@ import eventImg from '../assets/events.png';
 import backPattern from '../assets/backpattern.png';
 
 const tabs = ['General Notice', 'Press Release', 'Tenders'];
-const notices = [
+const generalNotices = [
   {
     date: '20',
     month: 'JUN',
@@ -74,22 +74,28 @@ export default function NoticeSection({ bgColor, style }) {
               ))}
             </div>
             <div className='flex flex-col gap-4 mb-4'>
-              {notices.map((notice, idx) => (
-                <div
-                  key={idx}
-                  className='flex items-center gap-4 border-b border-[#D9E5DD] pb-4'
-                >
-                  <div className='flex flex-col items-center justify-center w-12'>
-                    <span className='text-xl font-bold text-[#005C25]'>
-                      {notice.date}
-                    </span>
-                    <span className='text-xs font-semibold text-[#005C25]'>
-                      {notice.month}
-                    </span>
+              {activeTab === 0 ? (
+                generalNotices.map((notice, idx) => (
+                  <div
+                    key={idx}
+                    className='flex items-center gap-4 border-b border-[#D9E5DD] pb-4'
+                  >
+                    <div className='flex flex-col items-center justify-center w-12'>
+                      <span className='text-xl font-bold text-[#005C25]'>
+                        {notice.date}
+                      </span>
+                      <span className='text-xs font-semibold text-[#005C25]'>
+                        {notice.month}
+                      </span>
+                    </div>
+                    <span className='text-base text-[#222]'>{notice.text}</span>
                   </div>
-                  <span className='text-base text-[#222]'>{notice.text}</span>
+                ))
+              ) : (
+                <div className="flex items-center justify-center h-32 text-lg text-gray-500 font-semibold">
+                  Coming soon
                 </div>
-              ))}
+              )}
             </div>
             <a
               href='#'

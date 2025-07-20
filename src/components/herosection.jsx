@@ -48,7 +48,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className='relative w-full h-[90vh] overflow-hidden z-0'>
+    <div className='relative w-full h-[100vh] overflow-hidden z-0'>
       {images.map((img, idx) => (
         <img
           key={idx}

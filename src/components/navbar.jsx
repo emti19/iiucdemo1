@@ -10,7 +10,7 @@ const Navbar = () => {
       <TopTabNav />
       <nav className='w-full sticky top-0 z-50 bg-white/30 backdrop-blur-lg shadow-lg'>
         {/* Main navbar */}
-        <div className='flex items-center justify-between px-4 py-3'>
+        <div className='flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3'>
           <div className='container mx-auto flex justify-between items-center'>
             {/* Left: Logo and search */}
             <div className='flex items-center gap-4'>
@@ -21,7 +21,7 @@ const Navbar = () => {
                 className='w-12 h-12 object-contain rounded'
               />
               {/* Search bar (hidden on mobile) */}
-              <div className='relative hidden md:block'>
+              <div className='relative hidden xl:block'>
                 <input
                   type='text'
                   placeholder='Search here...'
@@ -39,9 +39,9 @@ const Navbar = () => {
                 </svg>
               </div>
             </div>
-            {/* Hamburger for mobile */}
+            {/* Hamburger for mobile/tablet */}
             <button
-              className='md:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700'
+              className='lg:hidden flex items-center px-3 py-2 border rounded text-green-700 border-green-700'
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label='Toggle menu'
             >
@@ -59,8 +59,22 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            {/* Center: Menu (hidden on mobile) */}
-            <div className='hidden md:flex gap-2 bg-white bg-opacity-90 rounded-full shadow px-4 py-2'>
+            {/* Center: Menu (hidden on mobile/tablet) */}
+            <div
+              className="
+                hidden lg:flex
+                flex-wrap
+                gap-2
+                bg-white bg-opacity-90 rounded-full shadow px-4 py-2
+                justify-center
+                max-w-3xl 
+                custom:!flex
+              "
+              style={{
+                // This inline style is a fallback for custom breakpoints
+                maxWidth: '700px', // Adjust as needed for your design
+              }}
+            >
               {[
                 { label: 'About', items: ['Overview', 'History', 'Mission'] },
                 { label: 'Faculties', items: ['Faculty 1', 'Faculty 2'] },
@@ -73,7 +87,7 @@ const Navbar = () => {
                 { label: 'IQAC', items: ['IQAC Info'] },
               ].map((menu) => (
                 <div key={menu.label} className='relative group'>
-                  <button className='px-3 py-1 rounded-full hover:bg-green-100 focus:outline-none flex items-center gap-1 text-gray-700 font-medium'>
+                  <button className='px-1 py-1 rounded hover:bg-green-100 focus:outline-none flex items-center gap-1 text-gray-700 font-semibold text-sm xl:text-base'>
                     <span>{menu.label}</span>
                     <svg
                       className='w-3 h-3'
@@ -104,22 +118,22 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
-            {/* Right: Contact and Login (hidden on mobile) */}
-            <div className='hidden md:flex items-center gap-3'>
-              <button className='px-6 py-2 rounded-full border border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
+            {/* Right: Contact and Login (hidden on mobile/tablet) */}
+            <div className='hidden lg:flex items-center gap-3'>
+              <button className='px-4 py-1 text-sm xl:px-6 xl:py-2 xl:text-base rounded-full border border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
                 Contact us
               </button>
               <a href="https://www.iiuc.ac.bd/login">
-              <button className='px-6 py-2 rounded-full bg-[#005C25] text-white font-semibold hover:bg-green-800 transition'>
-                Log in
-              </button>
+                <button className='px-4 py-1 text-sm xl:px-6 xl:py-2 xl:text-base rounded-full bg-[#005C25] text-white font-semibold hover:bg-green-800 transition'>
+                  Log in
+                </button>
               </a>
             </div>
           </div>
         </div>
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className='md:hidden bg-white shadow-lg px-4 py-2'>
+          <div className='lg:hidden bg-white shadow-lg px-4 py-2'>
             <div className='flex flex-col gap-2'>
               {[
                 { label: 'About', items: ['Overview', 'History', 'Mission'] },
@@ -147,12 +161,7 @@ const Navbar = () => {
                   ))}
                 </div>
               ))}
-              <button className='mt-2 px-6 py-2 rounded-full border border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
-                Contact us
-              </button>
-              <button className='mt-2 px-6 py-2 rounded-full bg-[#005C25] text-white font-semibold hover:bg-green-800 transition'>
-                Log in
-              </button>
+              {/* Contact us and Log in buttons removed for mobile/tablet */}
             </div>
           </div>
         )}
