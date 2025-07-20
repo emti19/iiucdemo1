@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import ab1 from '../assets/ab1.png';
-import ab2 from '../assets/ab2.png';
-import g1 from '../assets/gallery/g1.png';
-import g2 from '../assets/gallery/g2.png';
-import g3 from '../assets/gallery/g3.png';
-import g4 from '../assets/gallery/g4.png';
+import c1 from '../assets/course/c1.jpg';
+import c2 from '../assets/course/c2.png';
+import c3 from '../assets/course/c3.png';
+import c4 from '../assets/course/c4.jpg';
+import c5 from '../assets/course/c5.jpg';
+import c6 from '../assets/course/c6.png';
 import bg from '../assets/bg.png';
 
-const CourseSearch = () => {
+export default function CourseSearch() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [studyLevel, setStudyLevel] = useState('Study level');
@@ -18,48 +18,48 @@ const CourseSearch = () => {
       id: 1,
       title: 'Electronic And Telecommunication',
       level: 'Masters',
-      levelColor: 'bg-green-500',
-      image: ab1,
+      levelColor: '#005C25',
+      image: c6,
       alt: 'Circuit board with glowing orange lines',
     },
     {
       id: 2,
-      title: "Our'anic Sciences and Islamic Studies (QSIS)",
+      title: "Qur'anic Sciences and Islamic Studies (QSIS)",
       level: 'Bachelor',
-      levelColor: 'bg-blue-800',
-      image: ab2,
+      levelColor: '#0D0357',
+      image: c5,
       alt: 'Open book with Arabic script and red fez hat',
     },
     {
       id: 3,
       title: 'Computer Science And Engineering',
       level: 'Masters',
-      levelColor: 'bg-green-500',
-      image: g1,
+      levelColor: '#005C25',
+      image: c4,
       alt: 'Person with glasses looking at laptop with code',
     },
     {
       id: 4,
       title: 'Arabic Language',
       level: 'Diploma',
-      levelColor: 'bg-purple-600',
-      image: g2,
+      levelColor: '#0D0357',
+      image: c3,
       alt: 'Hands holding open book with Arabic script',
     },
     {
       id: 5,
       title: 'Civil Engineering',
       level: 'Masters',
-      levelColor: 'bg-green-500',
-      image: g3,
+      levelColor: '#005C25',
+      image: c2,
       alt: 'Architectural blueprints with compass and ruler',
     },
     {
       id: 6,
       title: 'Department of Law',
       level: 'Bachelor',
-      levelColor: 'bg-blue-800',
-      image: g4,
+      levelColor: '#0D0357',
+      image: c1,
       alt: 'Golden scale of justice with wooden gavel',
     },
     // Additional courses for pagination demo
@@ -67,24 +67,24 @@ const CourseSearch = () => {
       id: 7,
       title: 'Mechanical Engineering',
       level: 'Masters',
-      levelColor: 'bg-green-500',
-      image: ab1,
+      levelColor: '#005C25',
+      image: c2,
       alt: 'Mechanical engineering',
     },
     {
       id: 8,
       title: 'Electrical Engineering',
       level: 'Bachelor',
-      levelColor: 'bg-blue-800',
-      image: ab2,
+      levelColor: '#0D0357',
+      image: c6,
       alt: 'Electrical engineering',
     },
     {
       id: 9,
       title: 'Business Administration',
       level: 'Masters',
-      levelColor: 'bg-green-500',
-      image: g1,
+      levelColor: '#005C25',
+      image: c1,
       alt: 'Business administration',
     },
   ];
@@ -210,13 +210,35 @@ const CourseSearch = () => {
                   <img
                     src={course.image}
                     alt={course.alt}
-                    className='w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-300'
+                    className='w-full h-40 sm:h-48 lg:h-[344px] object-cover group-hover:scale-105 transition-transform duration-300'
                   />
+
+                  {/* White overlay at bottom with gradient transition */}
+                  <div className='absolute bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-white via-white/90 to-transparent'></div>
+
+                  {/* Level tag positioned in the white area */}
                   <span
-                    className={`absolute bottom-2 left-2 px-2 sm:px-3 py-1 rounded-full text-white text-xs font-semibold ${course.levelColor}`}
+                    className='absolute bottom-16 left-3 text-white text-xs font-semibold'
+                    style={{
+                      backgroundColor: course.levelColor,
+                      width: '75px',
+                      height: '32px',
+                      borderRadius: '4px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
                   >
                     {course.level}
                   </span>
+
+                  {/* Course title positioned in the white area */}
+                  <div className='absolute bottom-6 left-3 right-3'>
+                    <h3 className='text-xs sm:text-sm lg:text-base font-bold text-black leading-tight'>
+                      {course.title}
+                    </h3>
+                  </div>
+
                   {/* Arrow icon for some cards */}
                   {course.id === 4 && (
                     <div className='absolute top-2 right-2 w-5 h-5 sm:w-6 sm:h-6 bg-blue-800 rounded flex items-center justify-center'>
@@ -233,11 +255,6 @@ const CourseSearch = () => {
                       </svg>
                     </div>
                   )}
-                </div>
-                <div className='p-3 sm:p-4'>
-                  <h3 className='text-sm sm:text-base lg:text-lg font-semibold text-gray-800 leading-tight'>
-                    {course.title}
-                  </h3>
                 </div>
               </div>
             ))}
@@ -305,6 +322,4 @@ const CourseSearch = () => {
       </div>
     </div>
   );
-};
-
-export default CourseSearch;
+}
