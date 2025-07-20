@@ -35,7 +35,7 @@ export default function FindYourWay() {
       }, 300); // 300ms delay
     } else {
       timeoutId = setTimeout(() => {
-        setCurrentBg(backPattern);
+        setCurrentBg(backpattern); // <-- fixed variable name
       }, 300); // 300ms delay
     }
 
