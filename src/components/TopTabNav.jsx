@@ -8,7 +8,7 @@ const TopTabNav = () => (
         <a href='/' className='hover:underline'>
           V1
         </a>
-        <a href='/v2' className='hover:underline'>
+        <a href='/v2' target='_blank' className='hover:underline'>
           V2
         </a>
         <a href='#' className='hover:underline'>
