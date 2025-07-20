@@ -24,9 +24,9 @@ const App = () => {
       <FindYourWay />
       <CourseSearch />
       <ResearchPublication />
-      <AboutIIUC />
-      <StatsCounter />
       <LatestNews />
+      <StatsCounter />
+      <AboutIIUC />
       {/* <Leadership /> */}
       <Gallery />
       <VirtualVisit />

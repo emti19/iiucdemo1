@@ -23,7 +23,7 @@ const TopTabNav = () => (
         <a href='#' className='hover:underline'>
           Transport
         </a>
-        <div className='relative group'>
+        <div className='relative group' style={{ zIndex: 100 }}>
           <button className='flex items-center gap-1 focus:outline-none'>
             <span>Quick info</span>
             <svg
@@ -41,7 +41,7 @@ const TopTabNav = () => (
             </svg>
           </button>
           {/* Dropdown */}
-          <div className='absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50'>
+          <div className='absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity' style={{ zIndex: 100 }}>
             <a href='#' className='block px-4 py-2 hover:bg-gray-100'>
               Info 1
             </a>

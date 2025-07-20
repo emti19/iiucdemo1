@@ -109,9 +109,11 @@ const Navbar = () => {
               <button className='px-6 py-2 rounded-full border border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
                 Contact us
               </button>
+              <a href="https://www.iiuc.ac.bd/login">
               <button className='px-6 py-2 rounded-full bg-[#005C25] text-white font-semibold hover:bg-green-800 transition'>
                 Log in
               </button>
+              </a>
             </div>
           </div>
         </div>
