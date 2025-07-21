@@ -6,6 +6,7 @@ import c4 from '../assets/course/c4.jpg';
 import c5 from '../assets/course/c5.jpg';
 import c6 from '../assets/course/c6.png';
 import bg from '../assets/bg.png';
+import backPattern from '../assets/backpattern.png';
 
 export default function CourseSearch() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -101,19 +102,11 @@ export default function CourseSearch() {
   };
 
   return (
-    <div
-      className='py-16 px-8 font-satoshi relative'
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Overlay for readability */}
+    <div className='relative w-full py-16 px-8 font-satoshi overflow-hidden'>
+      {/* Background Image with variable Opacity */}
       <div
-        className='absolute inset-0'
-        style={{ backgroundColor: '#F2F7F4', opacity: 0.96 }}
+        className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-5 z-0'
+        style={{ backgroundImage: `url(${backPattern})` }}
       ></div>
       <div className='relative z-10'>
         <div className='max-w-7xl mx-auto'>

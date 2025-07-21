@@ -42,8 +42,8 @@ export default function NoticeSection({ bgColor, style }) {
 
   return (
     <div
-      className={`relative w-full py-16 overflow-hidden ${bgColor}`}
-      style={style}
+      className={`relative w-full py-16 overflow-hidden ${bgColor} bg-gradient-to-b from-[#003716] via-[#003716]/30 to-transparent`}
+       
     >
       {/* Background Image with variable Opacity */}
       <div

@@ -22,7 +22,7 @@ const Home = () => (
     <HeroSection />
     <NoticeSection />
     <AdmissionSection />
-    <FindYourWay />
+    {/* <FindYourWay /> */}
     <CourseSearch />
     <ResearchPublication />
     <LatestNews />

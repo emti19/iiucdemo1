@@ -68,8 +68,7 @@ const HeroSection = () => {
       <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#003716] via-[#003716]/90 to-transparent h-[32rem] z-30 flex items-end'>
         <div className='container mx-auto px-4 pb-32 w-full'>
           <div className='flex items-center justify-between text-white mb-8'>
-            <div>
-              <p className='text-lg font-medium mb-2'>Welcome To</p>
+            <div> 
               <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold font-fraunces'>
                 International Islamic <br /> University Chittagong
               </h1>
