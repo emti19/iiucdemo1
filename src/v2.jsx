@@ -15,7 +15,11 @@ import AdmissionSection2 from './components/admissionsection2';
 const V2 = () => (
   <>
     <Navbar />
-    <HeroSection />
+    <HeroSection
+      hideQuickLinks={true}
+      gradientHeight='h-[20rem]'
+      textLower={true}
+    />
     <NoticeSection2 style={{ backgroundColor: '#003716' }} />
     <AdmissionSection2
       style={{ backgroundColor: '#003716' }}

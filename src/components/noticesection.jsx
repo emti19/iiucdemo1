@@ -91,7 +91,7 @@ export default function NoticeSection({ bgColor, style }) {
                   </div>
                 ))
               ) : (
-                <div className="flex items-center justify-center h-32 text-lg text-gray-500 font-semibold">
+                <div className='flex items-center justify-center h-32 text-lg text-gray-500 font-semibold'>
                   Coming soon
                 </div>
               )}
