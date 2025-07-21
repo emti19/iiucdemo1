@@ -15,7 +15,11 @@ import { LuCalendarDays, LuMoveRight } from 'react-icons/lu';
 
 const images = [slide1, slide2, slide3, slide4, slide5, slide6];
 
-const HeroSection = () => {
+const HeroSection = ({
+  hideQuickLinks = false,
+  gradientHeight = 'h-[32rem]',
+  textLower = false,
+}) => {
   const [current, setCurrent] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [parallax, setParallax] = useState(0);
@@ -65,15 +69,22 @@ const HeroSection = () => {
         />
       ))}
 
-      <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#003716] via-[#003716]/90 to-transparent h-[32rem] z-30 flex items-end'>
-        <div className='container mx-auto px-4 pb-32 w-full'>
+      <div
+        className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#003716] via-[#003716]/90 to-transparent ${gradientHeight} z-30 flex items-end`}
+      >
+        <div
+          className={`container mx-auto px-4 w-full ${
+            textLower
+              ? 'pb-2 sm:pb-4 md:pb-8 h-full flex flex-col justify-end'
+              : 'pb-32'
+          }`}
+        >
           <div className='flex items-center justify-between text-white mb-8'>
             <div>
-              <p className='text-lg font-medium mb-2'>Welcome To</p>
               <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold font-fraunces'>
                 International Islamic <br /> University Chittagong
               </h1>
-              <p className='text-sm font-medium my-2'>
+              <p className='text-lg font-medium my-2'>
                 Combine Quality with Morality
               </p>
             </div>
@@ -95,32 +106,34 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 w-full mt-6'>
-            {quickLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className={`group flex flex-col items-start transition-opacity duration-300 ${
-                  hoveredIndex !== null && hoveredIndex !== index
-                    ? 'opacity-40'
-                    : 'opacity-100'
-                }`}
-              >
-                {/* Flex container with space between icon+label and arrow */}
-                <div className='flex justify-between items-center w-full text-white text-lg font-semibold'>
-                  <div className='flex items-center gap-5'>
-                    {link.icon}
-                    {link.label}
+          {!hideQuickLinks && (
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 w-full mt-6'>
+              {quickLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  className={`group flex flex-col items-start transition-opacity duration-300 ${
+                    hoveredIndex !== null && hoveredIndex !== index
+                      ? 'opacity-40'
+                      : 'opacity-100'
+                  }`}
+                >
+                  {/* Flex container with space between icon+label and arrow */}
+                  <div className='flex justify-between items-center w-full text-white text-lg font-semibold'>
+                    <div className='flex items-center gap-5'>
+                      {link.icon}
+                      {link.label}
+                    </div>
+                    {/* Right arrow: hidden until hover */}
+                    <LuMoveRight className='w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                   </div>
-                  {/* Right arrow: hidden until hover */}
-                  <LuMoveRight className='w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                </div>
-                <span className='block w-full h-0.5 bg-white mt-2 transition' />
-              </a>
-            ))}
-          </div>
+                  <span className='block w-full h-0.5 bg-white mt-2 transition' />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

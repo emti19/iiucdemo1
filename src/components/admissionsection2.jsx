@@ -33,7 +33,10 @@ export default function AdmissionSection2({ bgColor, style, headingWhite }) {
       {/* Background Image with variable Opacity */}
       <div
         className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-80 z-0'
-        style={{ backgroundImage: `url(${backPattern})` }}
+        style={{
+          backgroundImage: `url(${backPattern})`,
+          transform: 'scaleY(-1)',
+        }}
       ></div>
       {/* Linear gradient overlay (bottom) */}
       <div
