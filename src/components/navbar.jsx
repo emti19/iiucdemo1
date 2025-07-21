@@ -61,7 +61,7 @@ const Navbar = () => {
             </button>
             {/* Center: Menu (hidden on mobile/tablet) */}
             <div
-              className="
+              className='
                 hidden lg:flex
                 flex-wrap
                 gap-2
@@ -69,7 +69,7 @@ const Navbar = () => {
                 justify-center
                 max-w-3xl 
                 custom:!flex
-              "
+              '
               style={{
                 // This inline style is a fallback for custom breakpoints
                 maxWidth: '700px', // Adjust as needed for your design
@@ -123,7 +123,7 @@ const Navbar = () => {
               <button className='px-4 py-1 text-sm xl:px-6 xl:py-2 xl:text-base rounded-full border border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
                 Contact us
               </button>
-              <a href="https://www.iiuc.ac.bd/login">
+              <a href='https://www.iiuc.ac.bd/login'>
                 <button className='px-4 py-1 text-sm xl:px-6 xl:py-2 xl:text-base rounded-full bg-[#005C25] text-white font-semibold hover:bg-green-800 transition'>
                   Log in
                 </button>

@@ -20,7 +20,7 @@ const admissionLinks = [
   { label: 'Result of Admission Test' },
 ];
 
-export default function AdmissionSection({ bgColor, style, headingWhite }) {
+export default function AdmissionSection2({ bgColor, style, headingWhite }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -32,8 +32,16 @@ export default function AdmissionSection({ bgColor, style, headingWhite }) {
     >
       {/* Background Image with variable Opacity */}
       <div
-        className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-5 z-0'
+        className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-80 z-0'
         style={{ backgroundImage: `url(${backPattern})` }}
+      ></div>
+      {/* Linear gradient overlay (bottom) */}
+      <div
+        className='absolute inset-0 z-10 pointer-events-none'
+        style={{
+          background:
+            'linear-gradient(0deg, #003716 0%, rgba(0,55,22,0.85) 15%, rgba(0,55,22,0.0) 20%)',
+        }}
       ></div>
 
       {/* Foreground Content */}
