@@ -51,6 +51,15 @@ export default function NoticeSection2({ bgColor, style }) {
         style={{ backgroundImage: `url(${backPattern})`, filter: 'invert(5%)' }}
       ></div>
 
+      {/* Gradient overlay */}
+      <div
+        className='absolute inset-0 z-0'
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(0, 55, 22, 1) 0%, transparent 35%)',
+        }}
+      ></div>
+
       {/* Foreground Content */}
       <div className='container mx-auto'>
         <div className='relative z-10 bg-[#F7FAF7] rounded-xl border border-[#D9E5DD] p-8 flex flex-col md:flex-row gap-8 w-full shadow max-w-7xl mx-auto'>

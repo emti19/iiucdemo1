@@ -42,8 +42,7 @@ export default function NoticeSection({ bgColor, style }) {
 
   return (
     <div
-      className={`relative w-full py-16 overflow-hidden ${bgColor} bg-gradient-to-b from-[#003716] via-[#003716]/30 to-transparent`}
-       
+      className={`relative w-full py-16 overflow-hidden ${bgColor} bg-gradient-to-b from-[#003716] via-[#003716]/5 to-transparent`}
     >
       {/* Background Image with variable Opacity */}
       <div
@@ -63,8 +62,16 @@ export default function NoticeSection({ bgColor, style }) {
                   key={tab}
                   onClick={() => setActiveTab(idx)}
                   className={`px-5 py-2 rounded-full font-semibold transition-all duration-500 
-                    ${activeTab === idx ? 'bg-[#005C25] text-white shadow' : 'bg-[#E6F0E6] text-[#222]'}
-                    sm:${activeTab === idx ? 'bg-[#005C25] text-white shadow' : 'bg-transparent text-[#222]'}
+                    ${
+                      activeTab === idx
+                        ? 'bg-[#005C25] text-white shadow'
+                        : 'bg-[#E6F0E6] text-[#222]'
+                    }
+                    sm:${
+                      activeTab === idx
+                        ? 'bg-[#005C25] text-white shadow'
+                        : 'bg-transparent text-[#222]'
+                    }
                   `}
                   style={{ minWidth: 120 }}
                 >
