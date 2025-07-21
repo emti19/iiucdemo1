@@ -36,6 +36,7 @@ export default function AdmissionSection2({ bgColor, style, headingWhite }) {
         style={{
           backgroundImage: `url(${backPattern})`,
           transform: 'scaleY(-1)',
+          filter: 'invert(5%)',
         }}
       ></div>
       {/* Linear gradient overlay (bottom) */}
