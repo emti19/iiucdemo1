@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopTabNav = () => (
   <div className='hidden md:block w-full bg-[var(--primaryGreen)]'>
-    <div className='container mx-auto flex justify-between items-center text-sm  px-4 sm:px-6 lg:px-16 py-1'>
+    <div className='container mx-auto flex justify-between items-center text-sm  px-4 sm:px-6 lg:px-16 xl:px-2 py-1'>
       {/* Left side quick links */}
       <div className='flex gap-6 items-center text-[#C8DED1]'>
         <a href='/' className='hover:underline'>
