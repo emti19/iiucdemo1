@@ -1,7 +1,5 @@
 import Navbar from './components/navbar';
 import HeroSection from './components/herosection';
-import NoticeSection from './components/noticesection';
-import AdmissionSection from './components/admissionsection';
 import FindYourWay from './components/findyourwaysection';
 import CourseSearch from './components/CourseSearch';
 import ResearchPublication from './components/ResearchPublication';
@@ -11,13 +9,15 @@ import AboutIIUC from './components/AboutIIUC';
 import Gallery from './components/Gallery';
 import VirtualVisit from './components/VirtualVisit';
 import Footer from './components/Footer';
+import NoticeSection2 from './components/noticesection2';
+import AdmissionSection2 from './components/admissionsection2';
 
 const V2 = () => (
   <>
     <Navbar />
     <HeroSection />
-    <NoticeSection style={{ backgroundColor: '#003716' }} />
-    <AdmissionSection
+    <NoticeSection2 style={{ backgroundColor: '#003716' }} />
+    <AdmissionSection2
       style={{ backgroundColor: '#003716' }}
       headingWhite={true}
     />

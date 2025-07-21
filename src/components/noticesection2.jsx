@@ -37,7 +37,7 @@ const generalNotices = [
   },
 ];
 
-export default function NoticeSection({ bgColor, style }) {
+export default function NoticeSection2({ bgColor, style }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -47,7 +47,7 @@ export default function NoticeSection({ bgColor, style }) {
     >
       {/* Background Image with variable Opacity */}
       <div
-        className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-5 z-0'
+        className='absolute inset-0 bg-no-repeat bg-cover bg-center opacity-80 z-0'
         style={{ backgroundImage: `url(${backPattern})` }}
       ></div>
 
@@ -92,7 +92,7 @@ export default function NoticeSection({ bgColor, style }) {
                   </div>
                 ))
               ) : (
-                <div className="flex items-center justify-center h-32 text-lg text-gray-500 font-semibold">
+                <div className='flex items-center justify-center h-32 text-lg text-gray-500 font-semibold'>
                   Coming soon
                 </div>
               )}
