@@ -10,7 +10,7 @@ const Navbar = () => {
       <TopTabNav />
       <nav className='w-full sticky top-0 z-50 bg-white/30 backdrop-blur-lg shadow-lg'>
         {/* Main navbar */}
-        <div className='flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3'>
+        <div className='flex items-center justify-between px-4 sm:px-6 lg:px-16 py-3'>
           <div className='container mx-auto flex justify-between items-center'>
             {/* Left: Logo and search */}
             <div className='flex items-center gap-4'>
@@ -87,7 +87,7 @@ const Navbar = () => {
                 { label: 'IQAC', items: ['IQAC Info'] },
               ].map((menu) => (
                 <div key={menu.label} className='relative group'>
-                  <button className='px-1 py-1 rounded hover:bg-green-100 focus:outline-none flex items-center gap-1 text-gray-700 font-semibold text-sm xl:text-base'>
+                  <button className='px-1 py-1 rounded hover:bg-green-100 focus:outline-none flex items-center gap-1 text-gray-700 font-semibold text-xs xl:text-base'>
                     <span>{menu.label}</span>
                     <svg
                       className='w-3 h-3'
