@@ -13,6 +13,7 @@ import { PiMicroscope } from 'react-icons/pi';
 import { BsPersonBoundingBox } from 'react-icons/bs';
 import { LuCalendarDays, LuMoveRight } from 'react-icons/lu';
 
+// Change image
 const images = [slide1, slide2, slide3, slide4, slide5, slide6];
 
 const HeroSection = ({
