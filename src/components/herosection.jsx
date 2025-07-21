@@ -70,7 +70,7 @@ const HeroSection = () => {
           <div className='flex items-center justify-between text-white mb-8'>
             <div>
               <p className='text-lg font-medium mb-2'>Welcome To</p>
-              <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold'>
+              <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold font-fraunces'>
                 International Islamic <br /> University Chittagong
               </h1>
               <p className='text-sm font-medium my-2'>

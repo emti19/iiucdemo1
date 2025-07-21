@@ -218,7 +218,7 @@ export default function CourseSearch() {
 
                   {/* Level tag positioned in the white area */}
                   <span
-                    className='absolute bottom-16 left-3 text-white text-xs font-semibold'
+                    className='absolute top-3 left-3 text-white text-xs font-semibold'
                     style={{
                       backgroundColor: course.levelColor,
                       width: '75px',
