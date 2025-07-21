@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <TopTabNav />
-      <nav className='w-full sticky top-0 z-50 bg-white/30 backdrop-blur-lg shadow-lg'>
+      <nav className='w-full sticky top-0 z-50 bg-transparent backdrop-blur-lg shadow-sm'>
         {/* Main navbar */}
         <div className='flex items-center justify-between px-4 sm:px-6 lg:px-16 py-3'>
           <div className='container mx-auto flex justify-between items-center'>
@@ -18,7 +18,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt='IIUC Logo'
-                className='w-12 h-12 object-contain rounded'
+                className='w-10 h-10 xl:w-12 xl:h-12 object-contain rounded'
               />
               {/* Search bar (hidden on mobile) */}
               <div className='relative hidden xl:block'>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 hidden lg:flex
                 flex-wrap
                 gap-2
-                bg-white bg-opacity-90 rounded-full shadow px-4 py-2
+                bg-white bg-opacity-80 rounded-full shadow px-4 py-1 xl:py-2
                 justify-center
                 max-w-3xl 
                 custom:!flex
@@ -120,7 +120,7 @@ const Navbar = () => {
             </div>
             {/* Right: Contact and Login (hidden on mobile/tablet) */}
             <div className='hidden lg:flex items-center gap-3'>
-              <button className='px-4 py-1 text-sm xl:px-6 xl:py-2 xl:text-base rounded-full border border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
+              <button className='px-4 py-1 text-sm xl:px-6 xl:py-2 xl:text-base rounded-full border bg-white bg-opacity-90 border-green-700 text-[#005C25] font-semibold hover:bg-green-50 transition'>
                 Contact us
               </button>
               <a href='https://www.iiuc.ac.bd/login'>
