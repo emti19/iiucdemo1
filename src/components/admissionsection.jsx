@@ -37,7 +37,7 @@ export default function AdmissionSection({ bgColor, style, headingWhite }) {
       ></div>
 
       {/* Foreground Content */}
-      <div className='container mx-auto px-2 sm:px-4'>
+      <div className='container mx-auto px-4 sm:px-8'>
         <div className='relative z-10 w-full flex flex-col items-center max-w-7xl mx-auto'>
           {/* Title */}
           <h1

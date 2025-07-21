@@ -52,8 +52,8 @@ export default function NoticeSection({ bgColor, style }) {
       ></div>
 
       {/* Foreground Content */}
-      <div className='container mx-auto'>
-        <div className='relative z-10 bg-[#F7FAF7] rounded-xl border border-[#D9E5DD] p-8 flex flex-col md:flex-row gap-8 w-full shadow max-w-7xl mx-auto'>
+      <div className='container mx-auto px-4 sm:px-8'>
+        <div className='relative z-10 bg-[#F7FAF7] rounded-xl border border-[#D9E5DD] p-8 flex flex-col lg:flex-row gap-8 w-full shadow max-w-7xl mx-auto'>
           {/* Notices */}
           <div className='flex-1'>
             <h2 className='text-2xl font-bold mb-6'>Notices</h2>
