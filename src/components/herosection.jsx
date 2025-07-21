@@ -82,7 +82,7 @@ const HeroSection = ({
         >
           <div className='flex items-center justify-between text-white mb-8'>
             <div>
-              <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold font-fraunces'>
+              <h1 className='text-3xl md:text-4xl lg:text-7xl font-mdeium font-fraunces'>
                 International Islamic <br /> University Chittagong
               </h1>
               <p className='text-lg font-medium my-2'>

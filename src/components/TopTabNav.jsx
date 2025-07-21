@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopTabNav = () => (
   <div className='hidden md:block w-full bg-[var(--primaryGreen)]'>
-    <div className='container mx-auto flex justify-between items-center text-sm  px-4 sm:px-6 lg:px-16 xl:px-2 py-1'>
+    <div className='container mx-auto flex justify-between items-center text-sm px-4 sm:px-6 lg:px-8 py-1'>
       {/* Left side quick links */}
       <div className='flex gap-6 items-center text-[#C8DED1]'>
         <a href='/' className='hover:underline'>
@@ -24,7 +24,7 @@ const TopTabNav = () => (
           Transport
         </a>
         <div className='relative group' style={{ zIndex: 100 }}>
-          <button className='flex items-center gap-1 focus:outline-none'>
+          <button className='flex items-center gap-1 focus:outline-none text-[#C8DED1]'>
             <span>Quick info</span>
             <svg
               className='w-3 h-3 ml-1'
