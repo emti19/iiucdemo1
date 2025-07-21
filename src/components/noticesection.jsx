@@ -57,16 +57,15 @@ export default function NoticeSection({ bgColor, style }) {
           {/* Notices */}
           <div className='flex-1'>
             <h2 className='text-2xl font-bold mb-6'>Notices</h2>
-            <div className='flex gap-2 mb-6 bg-[#E6F0E6] rounded-full px-2 py-1 w-fit'>
+            <div className='flex flex-col sm:flex-row gap-2 mb-6 sm:bg-[#E6F0E6] sm:rounded-full sm:px-2 sm:py-1 w-fit'>
               {tabs.map((tab, idx) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(idx)}
-                  className={`px-5 py-2 rounded-full font-semibold transition-all duration-500 ${
-                    activeTab === idx
-                      ? 'bg-[#005C25] text-white shadow'
-                      : 'bg-transparent text-[#222]'
-                  }`}
+                  className={`px-5 py-2 rounded-full font-semibold transition-all duration-500 
+                    ${activeTab === idx ? 'bg-[#005C25] text-white shadow' : 'bg-[#E6F0E6] text-[#222]'}
+                    sm:${activeTab === idx ? 'bg-[#005C25] text-white shadow' : 'bg-transparent text-[#222]'}
+                  `}
                   style={{ minWidth: 120 }}
                 >
                   {tab}

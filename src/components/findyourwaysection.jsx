@@ -48,7 +48,7 @@ export default function FindYourWay() {
 
   return (
     <section
-      className='relative bg-center bg-cover w-full transition-all duration-700 ease-in-out  '
+      className='relative bg-center bg-cover w-full transition-all duration-700 ease-in-out'
       style={{
         backgroundImage: `url(${currentBg})`,
         backgroundSize: 'cover',
@@ -91,7 +91,7 @@ export default function FindYourWay() {
         </div>
 
         {/* Right Section */}
-        <div className='w-full md:w-3/4 flex justify-center border-2 rounded-xl border-[#005C25]'>
+        <div className='w-full md:w-3/4 flex justify-center border rounded-xl border-[#005C25]'>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full max-w-4xl rounded-xl overflow-hidden'>
             {mainLinks.map((link, idx) => (
               <a
@@ -103,15 +103,15 @@ export default function FindYourWay() {
                 className={`relative flex items-center justify-center w-[304px] h-[312px] text-white font-semibold text-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out group
                   ${
                     hovered === idx
-                      ? 'bg-white bg-opacity-10 shadow-lg transition-all duration-500 ease-in-out group'
+                      ? 'bg-white bg-opacity-10 shadow-lg'
                       : 'bg-transparent'
                   }
                 `}
                 style={{
                   minWidth: '100%',
-                  minHeight: 180,
-                  maxWidth: 220,
-                  maxHeight: 220,
+                  minHeight: 250,
+                  maxWidth: 304,
+                  maxHeight: 350,
                   width: '100%',
                   height: '100%',
                 }}
