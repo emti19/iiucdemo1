@@ -11,6 +11,9 @@ const TopTabNav = () => (
         <a href='/v2' target='_blank' className='hover:underline'>
           V2
         </a>
+        <a href='https://www.figma.com/proto/iWVehTe4vlbKPx2WXp8dFo/IIUC---Sadek?page-id=1%3A2&node-id=28-1646&viewport=425%2C116%2C0.06&t=6saj0hZ9sqPy1Jm5-1&scaling=scale-down-width&content-scaling=fixed' target='_blank' className='hover:underline'>
+          V3
+        </a>
         <a href='#' className='hover:underline'>
           Quick Contacts
         </a>
